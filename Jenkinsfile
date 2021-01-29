@@ -18,8 +18,8 @@ pipeline {
         }
         stage('Create Docker Image for Tomcat'){
             steps {
-                sh "chmod 000 Dockerfile'
-                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "chmod 000 Dockerfile"
+                sh "docker build -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
